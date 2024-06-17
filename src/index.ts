@@ -1,9 +1,8 @@
 import { Hono } from "hono";
+import EasyRoutes from "./domain/easy";
 
 const app = new Hono();
 
-app.get("/", (c) => {
-  return c.text("Welcome to Hono!");
-});
+app.route("/easy", EasyRoutes);
 
 export default app;
